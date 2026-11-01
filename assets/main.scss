@@ -3,15 +3,14 @@
 ---
 
 @import "minima";
-
 /* ========================================
-   HOMEPAGE POST LAYOUT
+   EDITORIAL POST LAYOUT
 ======================================== */
 
 .featured-posts {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 100px;
   margin-top: 60px;
 }
 
@@ -19,27 +18,19 @@
   display: flex;
   align-items: center;
   position: relative;
-  min-height: 360px;
-  gap: 0;
-}
-.featured-post,
-.featured-image,
-.featured-content {
-  box-sizing: border-box;
+  width: 100%;
+  min-height: 380px;
 }
 
-/* ========================================
-   IMAGE
-======================================== */
-
+/* Image */
 .featured-image {
   display: block;
   position: relative;
-  width: 55%;
-  flex: 0 0 55%;
-  height: 360px;
+  flex: 0 0 60%;
+  width: 60%;
+  height: 380px;
   overflow: hidden;
-  border-radius: 4px;
+  z-index: 0;
 }
 
 .featured-image img {
@@ -54,9 +45,21 @@
   transform: scale(1.04);
 }
 
-/* ========================================
-   GRADIENT FADE
-======================================== */
+/* Text */
+.featured-content {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 50%;
+  width: 50%;
+  margin-left: -10%;
+  padding: 35px 45px;
+  box-sizing: border-box;
+}
+
+/* Image left: fade toward the text */
+.featured-post.image-left {
+  flex-direction: row;
+}
 
 .featured-post.image-left .featured-image::after {
   content: "";
@@ -64,10 +67,20 @@
   inset: 0;
   background: linear-gradient(
     to right,
-    transparent 55%,
+    transparent 45%,
     $background-color 100%
   );
   pointer-events: none;
+}
+
+/* Image right: text on left */
+.featured-post.image-right {
+  flex-direction: row-reverse;
+}
+
+.featured-post.image-right .featured-content {
+  margin-left: 0;
+  margin-right: -10%;
 }
 
 .featured-post.image-right .featured-image::after {
@@ -76,24 +89,13 @@
   inset: 0;
   background: linear-gradient(
     to left,
-    transparent 55%,
+    transparent 45%,
     $background-color 100%
   );
   pointer-events: none;
 }
 
-/* ========================================
-   TEXT CONTENT
-======================================== */
-
-.featured-content {
-  position: relative;
-  z-index: 1;
-  width: 45%;
-  flex: 0 0 45%;
-  padding: 30px 45px;
-}
-
+/* Typography */
 .post-meta {
   display: block;
   font-size: 0.75rem;
@@ -122,7 +124,6 @@
 .post-subtitle {
   font-size: 1.1rem;
   line-height: 1.5;
-  font-weight: 400;
   color: $grey-color;
   margin-bottom: 18px;
 }
@@ -131,20 +132,6 @@
   font-size: 0.95rem;
   line-height: 1.8;
   color: $text-color;
-}
-
-/* ========================================
-   ALTERNATING LAYOUT
-======================================== */
-
-/* First post: image left, text right */
-.featured-post.image-left {
-  flex-direction: row;
-}
-
-/* Second post: text left, image right */
-.featured-post.image-right {
-  flex-direction: row-reverse;
 }
 
 /* ========================================
