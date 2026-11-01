@@ -5,51 +5,27 @@ layout: default
 <div class="home">
   {{ content }}
 
-  <div class="featured-posts">
-    {% for post in site.posts %}
-      <article class="featured-post {% cycle 'image-left', 'image-right' %}">
+  <div class="category-sections">
+    {% for category in site.data.categories %}
+      <article class="category-feature {% cycle 'category-image-left', 'category-image-right' %}">
 
-      <div class="featured-media">
-        <a class="featured-image"
-          href="{{ post.url | relative_url }}">
-          {% if post.image %}
-            <img src="{{ post.image | relative_url }}"
-                alt="{{ post.title | escape }}">
-          {% endif %}
-        </a>
-      </div>
-
-      <div class="featured-content">
-
-        <span class="post-meta">
-          {{ post.date | date: "%B %-d, %Y" }}
-          {% if post.categories.size > 0 %}
-            · {{ post.categories | join: ", " }}
-          {% endif %}
-        </span>
-
-        <h2>
-          <a href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
+        <div class="category-media">
+          <a href="{{ category.slug | prepend: '/' | append: '/' | relative_url }}">
+            <img src="{{ category.image | relative_url }}"
+                alt="{{ category.name | escape }}">
           </a>
-        </h2>
+        </div>
 
-        {% if post.subtitle %}
-          <p class="post-subtitle">
-            {{ post.subtitle | escape }}
-          </p>
-        {% endif %}
+        <div class="category-content">
+          <h2>
+            <a href="{{ category.slug | prepend: '/' | append: '/' | relative_url }}">
+              {{ category.name | escape }}
+            </a>
+          </h2>
+          <p>{{ category.description }}</p>
+        </div>
 
-        <p>
-          {% if post.description %}
-            {{ post.description }}
-          {% else %}
-            {{ post.excerpt | strip_html | truncate: 160 }}
-          {% endif %}
-        </p>
-
-      </div>
-    </article>
+      </article>
     {% endfor %}
   </div>
 </div>

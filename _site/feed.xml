@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-11-02T00:55:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nardy</title><subtitle>Welcome to my website!</subtitle><entry><title type="html">AlphaZero 2</title><link href="http://localhost:4000/milestone/2026/11/01/AlphaZero-2.html" rel="alternate" type="text/html" title="AlphaZero 2" /><published>2026-11-01T18:00:00+09:00</published><updated>2026-11-01T18:00:00+09:00</updated><id>http://localhost:4000/milestone/2026/11/01/AlphaZero-2</id><content type="html" xml:base="http://localhost:4000/milestone/2026/11/01/AlphaZero-2.html"><![CDATA[<h1 id="hello-world">Hello World!</h1>
+
+<p>This is my first blog post using Jekyll and Minima.</p>
+
+<h2 id="what-im-learning">What I’m learning</h2>
+
+<ul>
+  <li>Markdown</li>
+  <li>Jekyll</li>
+  <li>GitHub Pages</li>
+</ul>
+
+<p>Thanks for visiting!</p>]]></content><author><name></name></author><category term="milestone" /><summary type="html"><![CDATA[Hello World! This is my first blog post using Jekyll and Minima. What I’m learning Markdown Jekyll GitHub Pages Thanks for visiting!]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/unnamed.webp" /><media:content medium="image" url="http://localhost:4000/assets/images/unnamed.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AlphaZero</title><link href="http://localhost:4000/milestone/2026/11/01/AlphaZero.html" rel="alternate" type="text/html" title="AlphaZero" /><published>2026-11-01T18:00:00+09:00</published><updated>2026-11-01T18:00:00+09:00</updated><id>http://localhost:4000/milestone/2026/11/01/AlphaZero</id><content type="html" xml:base="http://localhost:4000/milestone/2026/11/01/AlphaZero.html"><![CDATA[<p>While the humankind still does not have a definitive definition of “intelligent”.
+We can have a definitive saying about artificial intelligent (AI).</p>
+
+<!--more-->
+
+<p>This is a waaay more in-depth discussion about AlphaZero</p>]]></content><author><name></name></author><category term="milestone" /><summary type="html"><![CDATA[While the humankind still does not have a definitive definition of “intelligent”. We can have a definitive saying about artificial intelligent (AI).]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/unnamed.webp" /><media:content medium="image" url="http://localhost:4000/assets/images/unnamed.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Testing My Blog</title><link href="http://localhost:4000/project/2026/11/01/test-post.html" rel="alternate" type="text/html" title="Testing My Blog" /><published>2026-11-01T12:00:00+09:00</published><updated>2026-11-01T12:00:00+09:00</updated><id>http://localhost:4000/project/2026/11/01/test-post</id><content type="html" xml:base="http://localhost:4000/project/2026/11/01/test-post.html"><![CDATA[<p>Hello! This is my first blog post.</p>
+
+<p>If you can see this on the homepage, Jekyll is working!</p>]]></content><author><name></name></author><category term="Project" /><summary type="html"><![CDATA[Hello! This is my first blog post. If you can see this on the homepage, Jekyll is working!]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/unnamed.webp" /><media:content medium="image" url="http://localhost:4000/assets/images/unnamed.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

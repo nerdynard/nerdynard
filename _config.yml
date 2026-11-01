@@ -8,7 +8,11 @@ minima:
   show_excerpts: true
 
 header_pages:
+  - categories/milestone.md
+  - categories/project.md
   - about.md
+
+excerpt_separator: <!--more-->
 
 plugins:
   - jekyll-feed

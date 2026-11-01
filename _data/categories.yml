@@ -1,0 +1,9 @@
+- name: MileStone
+  slug: milestone
+  image: /assets/images/unnamed.webp
+  description: "Milestone in Artificial intelligence, machine learning."
+
+- name: Project
+  slug: project
+  image: /assets/images/unnamed.webp
+  description: "A collection of things I build, develop, and experiment with."
