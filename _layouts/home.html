@@ -9,42 +9,47 @@ layout: default
     {% for post in site.posts %}
       <article class="featured-post {% cycle 'image-left', 'image-right' %}">
 
+      <div class="featured-media">
         <a class="featured-image"
-           href="{{ post.url | relative_url }}">
+          href="{{ post.url | relative_url }}">
           {% if post.image %}
             <img src="{{ post.image | relative_url }}"
-                 alt="{{ post.title | escape }}">
+                alt="{{ post.title | escape }}">
           {% endif %}
         </a>
+      </div>
 
-        <div class="featured-content">
-          <span class="post-meta">
-            {{ post.date | date: "%B %-d, %Y" }}
-            {% if post.categories.size > 0 %}
-              · {{ post.categories | join: ", " }}
-            {% endif %}
-          </span>
+      <div class="featured-content">
 
-          <h2>
-            <a href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h2>
-          {% if post.subtitle %}
-            <p class="post-subtitle">
-              {{ post.subtitle | escape }}
-            </p>
+        <span class="post-meta">
+          {{ post.date | date: "%B %-d, %Y" }}
+          {% if post.categories.size > 0 %}
+            · {{ post.categories | join: ", " }}
           {% endif %}
-          <p>
-            {% if post.description %}
-              {{ post.description }}
-            {% else %}
-              {{ post.excerpt | strip_html | truncate: 160 }}
-            {% endif %}
-          </p>
-        </div>
+        </span>
 
-      </article>
+        <h2>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h2>
+
+        {% if post.subtitle %}
+          <p class="post-subtitle">
+            {{ post.subtitle | escape }}
+          </p>
+        {% endif %}
+
+        <p>
+          {% if post.description %}
+            {{ post.description }}
+          {% else %}
+            {{ post.excerpt | strip_html | truncate: 160 }}
+          {% endif %}
+        </p>
+
+      </div>
+    </article>
     {% endfor %}
   </div>
 </div>

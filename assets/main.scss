@@ -3,8 +3,9 @@
 ---
 
 @import "minima";
+
 /* ========================================
-   EDITORIAL POST LAYOUT
+   POST LIST
 ======================================== */
 
 .featured-posts {
@@ -14,23 +15,42 @@
   margin-top: 60px;
 }
 
+/* ========================================
+   POST COMPOSITION
+======================================== */
+
 .featured-post {
-  display: flex;
+  display: grid;
+  grid-template-areas: "layer";
   align-items: center;
   position: relative;
   width: 100%;
-  min-height: 380px;
+  min-height: 400px;
 }
 
-/* Image */
+/* Both elements occupy the SAME grid area */
+.featured-media,
+.featured-content {
+  grid-area: layer;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.featured-media {
+  position: relative;
+  width: 70%;
+  height: 400px;
+  overflow: hidden;
+  z-index: 1;
+}
+
 .featured-image {
   display: block;
-  position: relative;
-  flex: 0 0 60%;
-  width: 60%;
-  height: 380px;
-  overflow: hidden;
-  z-index: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .featured-image img {
@@ -38,30 +58,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
 .featured-image:hover img {
   transform: scale(1.04);
 }
 
-/* Text */
-.featured-content {
-  position: relative;
-  z-index: 2;
-  flex: 0 0 50%;
-  width: 50%;
-  margin-left: -10%;
-  padding: 35px 45px;
-  box-sizing: border-box;
-}
+/* ========================================
+   IMAGE FADE
+======================================== */
 
-/* Image left: fade toward the text */
-.featured-post.image-left {
-  flex-direction: row;
-}
-
-.featured-post.image-left .featured-image::after {
+/* Image on the left fades toward the right */
+.image-left .featured-media::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -73,17 +82,8 @@
   pointer-events: none;
 }
 
-/* Image right: text on left */
-.featured-post.image-right {
-  flex-direction: row-reverse;
-}
-
-.featured-post.image-right .featured-content {
-  margin-left: 0;
-  margin-right: -10%;
-}
-
-.featured-post.image-right .featured-image::after {
+/* Image on the right fades toward the left */
+.image-right .featured-media::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -95,7 +95,42 @@
   pointer-events: none;
 }
 
-/* Typography */
+/* ========================================
+   TEXT
+======================================== */
+
+.featured-content {
+  position: relative;
+  z-index: 2;
+  width: 52%;
+  padding: 35px 45px;
+  align-self: center;
+}
+
+/* Image LEFT, text RIGHT */
+.image-left .featured-media {
+  justify-self: start;
+}
+
+.image-left .featured-content {
+  justify-self: end;
+  text-align: left;
+}
+
+/* Image RIGHT, text LEFT */
+.image-right .featured-media {
+  justify-self: end;
+}
+
+.image-right .featured-content {
+  justify-self: start;
+  text-align: left;
+}
+
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+
 .post-meta {
   display: block;
   font-size: 0.75rem;
@@ -108,8 +143,8 @@
 .featured-content h2 {
   font-size: 2rem;
   line-height: 1.2;
-  margin-bottom: 14px;
   font-weight: 500;
+  margin-bottom: 14px;
 }
 
 .featured-content h2 a {
@@ -132,72 +167,4 @@
   font-size: 0.95rem;
   line-height: 1.8;
   color: $text-color;
-}
-
-/* ========================================
-   TABLET
-======================================== */
-
-@media screen and (max-width: 900px) {
-  .featured-posts {
-    gap: 50px;
-  }
-
-  .featured-image {
-    height: 300px;
-  }
-
-  .featured-content {
-    padding: 20px 25px;
-  }
-
-  .featured-content h2 {
-    font-size: 1.6rem;
-  }
-}
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media screen and (max-width: 600px) {
-  .featured-posts {
-    gap: 45px;
-    margin-top: 35px;
-  }
-
-  .featured-post,
-  .featured-post.image-right {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .featured-image {
-    width: 100%;
-    flex: none;
-    height: 250px;
-  }
-
-  .featured-content {
-    width: 100%;
-    flex: none;
-    padding: 22px 5px;
-  }
-
-  .featured-post.image-left .featured-image::after,
-  .featured-post.image-right .featured-image::after {
-    background: linear-gradient(
-      to bottom,
-      transparent 65%,
-      $background-color 100%
-    );
-  }
-
-  .featured-content h2 {
-    font-size: 1.5rem;
-  }
-
-  .post-subtitle {
-    font-size: 1rem;
-  }
 }
