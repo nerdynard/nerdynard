@@ -22,6 +22,11 @@
   min-height: 360px;
   gap: 0;
 }
+.featured-post,
+.featured-image,
+.featured-content {
+  box-sizing: border-box;
+}
 
 /* ========================================
    IMAGE
@@ -126,24 +131,6 @@
   font-size: 0.95rem;
   line-height: 1.8;
   color: $text-color;
-}
-
-.read-more {
-  display: inline-block;
-  margin-top: 12px;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $text-color;
-  border-bottom: 1px solid $text-color;
-  padding-bottom: 4px;
-  transition: opacity 0.3s ease;
-}
-
-.read-more:hover {
-  opacity: 0.6;
-  text-decoration: none;
 }
 
 /* ========================================
