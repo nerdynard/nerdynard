@@ -30,7 +30,11 @@ layout: default
               {{ post.title | escape }}
             </a>
           </h2>
-
+          {% if post.subtitle %}
+            <p class="post-subtitle">
+              {{ post.subtitle | escape }}
+            </p>
+          {% endif %}
           <p>
             {% if post.description %}
               {{ post.description }}
