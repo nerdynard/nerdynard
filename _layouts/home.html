@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="home">
+  {{ content }}
+
+  <div class="featured-posts">
+    {% for post in site.posts %}
+      <article class="featured-post {% cycle 'image-left', 'image-right' %}">
+
+        <a class="featured-image"
+           href="{{ post.url | relative_url }}">
+          {% if post.image %}
+            <img src="{{ post.image | relative_url }}"
+                 alt="{{ post.title | escape }}">
+          {% endif %}
+        </a>
+
+        <div class="featured-content">
+          <span class="post-meta">
+            {{ post.date | date: "%B %-d, %Y" }}
+            {% if post.categories.size > 0 %}
+              · {{ post.categories | join: ", " }}
+            {% endif %}
+          </span>
+
+          <h2>
+            <a href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h2>
+
+          <p>
+            {% if post.description %}
+              {{ post.description }}
+            {% else %}
+              {{ post.excerpt | strip_html | truncate: 160 }}
+            {% endif %}
+          </p>
+
+          <a class="read-more"
+             href="{{ post.url | relative_url }}">
+            Read article →
+          </a>
+        </div>
+
+      </article>
+    {% endfor %}
+  </div>
+</div>

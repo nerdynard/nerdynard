@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "My First Blog Post"
+title: "AlphaZero"
 date: 2026-11-01 18:00:00 +0900
-categories: blog
+categories: journal
+image: /assets/images/unnamed.webp
 ---
 
 # Hello World!
