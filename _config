@@ -1,0 +1,15 @@
+title: Nardy
+description: Welcome to my website!
+
+theme: minima
+
+minima:
+  skin: classic
+  show_excerpts: true
+
+header_pages:
+  - about.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
