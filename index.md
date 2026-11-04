@@ -3,11 +3,8 @@ layout: home
 title: Welcome
 ---
 
-Hi. I am Nard, a tech enthusiast.
-
-Recently, there has been lots of interests, both good and bad, in artificial intelligent (AI). I would like to voice my own opinion on the matter.
-
-As I fortunately have the opportunity learning and using AI for quite some time, I would like to go over a few milestones.
-Then, I might also start a few AI-powered projects.
+Artificial intelligence (AI) is the natural evolution of software development.
+But it is without a doubt that the current AI deployment is less than ideal to say the least.
+Nonetheless, I would like to discuss more on AI, and hopefully a "correct" demonstration of AI without damaging our lives.
 
 TL;DR: AI is an useful tool, and I believe I can deploy it "correctly".

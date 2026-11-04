@@ -252,7 +252,7 @@ table td { border: 1px solid #e8e8e8; }
 
 .featured-content p { font-size: 0.95rem; line-height: 1.8; color: #111; }
 
-.category-sections { display: flex; flex-direction: column; gap: 100px; margin: 60px 0; }
+.category-sections { display: flex; flex-direction: column; margin: 60px 0; }
 
 .category-feature { display: grid; grid-template-areas: "layer"; align-items: center; position: relative; min-height: 400px; }
 
@@ -285,7 +285,7 @@ table td { border: 1px solid #e8e8e8; }
 
 .category-image-right .category-media::after { background: linear-gradient(to left, transparent 45%, #fdfdfd 100%); }
 
-.category-posts { display: flex; flex-direction: column; gap: 100px; margin: 60px 0; }
+.category-posts { display: flex; flex-direction: column; margin: 60px 0; }
 
 .category-post { display: grid; grid-template-areas: "layer"; align-items: center; position: relative; min-height: 400px; }
 

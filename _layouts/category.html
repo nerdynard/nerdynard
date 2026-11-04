@@ -3,7 +3,7 @@ layout: page
 ---
 
 <div class="category-posts">
-  {% assign category_posts = site.categories[page.category] %}
+  {% assign category_posts = site.categories[page.category] | sort: "post_order" %}
 
   {% for post in category_posts %}
     <article class="category-post {% cycle 'post-image-left', 'post-image-right' %}">
